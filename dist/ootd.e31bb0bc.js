@@ -32666,12 +32666,10 @@ function (_React$Component) {
     value: function render() {
       return _react.default.createElement("div", null, _react.default.createElement(_reactInstagramEmbed.default, {
         url: "https://www.instagram.com/p/B3ZDadxnngD/",
-        maxWidth: 320,
         hideCaption: true,
         containerTagName: "div"
       }), _react.default.createElement(_reactInstagramEmbed.default, {
-        url: "https://www.instagram.com/p/B3rg1S7H6dd/",
-        maxWidth: 320,
+        url: "https://www.instagram.com/p/B3JoGALH0Ja/",
         hideCaption: true,
         containerTagName: "div"
       }));
