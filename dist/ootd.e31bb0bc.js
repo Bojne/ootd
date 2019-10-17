@@ -31985,7 +31985,7 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -32017,7 +32017,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -32052,12 +32052,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"stylesheets/styles.scss":[function(require,module,exports) {
+},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"stylesheets/styles.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/strict-uri-encode/index.js":[function(require,module,exports) {
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/strict-uri-encode/index.js":[function(require,module,exports) {
 'use strict';
 
 module.exports = function (str) {
@@ -32686,7 +32686,57 @@ function (_React$Component) {
         link: 'https://www.instagram.com/p/B3MctJzAvnB'
       }, {
         link: 'https://www.instagram.com/p/B3J2PQIgf-_'
-      }]
+      }, {
+        link: 'https://www.instagram.com/p/B3uHNpAnMKa'
+      }, {
+        link: 'https://www.instagram.com/p/B3trzHPnUG7'
+      }, {
+        link: 'https://www.instagram.com/p/B3tBJh-HU9A'
+      }, {
+        link: 'https://www.instagram.com/p/B3rg1S7H6dd'
+      }, {
+        link: 'https://www.instagram.com/p/B3rHaJpHamD'
+      }, {
+        link: 'https://www.instagram.com/p/B3qeBMVn4o5'
+      }, {
+        link: 'https://www.instagram.com/p/B3o8rO5n5sw'
+      }, {
+        link: 'https://www.instagram.com/p/B3ohAtOnQGv'
+      }, {
+        link: 'https://www.instagram.com/p/B3n3T9FHunv'
+      }, {
+        link: 'https://www.instagram.com/p/B3mYpwinelx'
+      }, {
+        link: 'https://www.instagram.com/p/B3l8qXRH9wA'
+      }, {
+        link: 'https://www.instagram.com/p/B3lTE7fnrhQ'
+      }, {
+        link: 'https://www.instagram.com/p/B3uAONDH4OD'
+      }, {
+        link: 'https://www.instagram.com/p/B3t2mYUnACx'
+      }, {
+        link: 'https://www.instagram.com/p/B3tt_iiHG8P'
+      }, {
+        link: 'https://www.instagram.com/p/B3ttlUvnGrN'
+      }, {
+        link: 'https://www.instagram.com/p/B3te14Hng3M'
+      }, {
+        link: 'https://www.instagram.com/p/B3tMLz_nYlo'
+      }, {
+        link: 'https://www.instagram.com/p/B3rOSRFHRvq'
+      }, {
+        link: 'https://www.instagram.com/p/B3q6UsFH3Rx'
+      }, {
+        link: 'https://www.instagram.com/p/B3o2d4fnrui'
+      }, {
+        link: 'https://www.instagram.com/p/B3oSnHknjBx'
+      }, {
+        link: 'https://www.instagram.com/p/B3l99DqHI2C'
+      }, {
+        link: 'https://www.instagram.com/p/B3lvmTwnU_z'
+      }].filter(function (item) {
+        return Math.random() > 0.5;
+      })
     };
     return _this;
   }
@@ -32696,7 +32746,9 @@ function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      return _react.default.createElement("div", null, _react.default.createElement("div", null, this.state.posts.map(function (obj) {
+      return _react.default.createElement("div", null, _react.default.createElement("div", {
+        class: "container"
+      }, this.state.posts.map(function (obj) {
         return _this2.renderIgPosts(obj.link);
       })));
     }
@@ -32704,11 +32756,13 @@ function (_React$Component) {
     key: "renderIgPosts",
     value: function renderIgPosts(link) {
       console.log(link);
-      return _react.default.createElement(_reactInstagramEmbed.default, {
+      return _react.default.createElement("div", {
+        class: "item"
+      }, _react.default.createElement(_reactInstagramEmbed.default, {
         url: link,
         hideCaption: true,
         containerTagName: "div"
-      });
+      }));
     }
   }]);
 
@@ -32716,7 +32770,7 @@ function (_React$Component) {
 }(_react.default.Component);
 
 _reactDom.default.render(_react.default.createElement(App, null), destination);
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./stylesheets/styles.scss":"stylesheets/styles.scss","react-instagram-embed":"node_modules/react-instagram-embed/es/index.js"}],"../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./stylesheets/styles.scss":"stylesheets/styles.scss","react-instagram-embed":"node_modules/react-instagram-embed/es/index.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -32744,7 +32798,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49998" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51126" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -32920,5 +32974,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/ootd.e31bb0bc.js.map

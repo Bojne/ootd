@@ -1,5 +1,15 @@
 h1 {
-  color: #FCB900; }
+  color: greenyellow; }
+
+.container {
+  border: 5px solid #000;
+  display: flex;
+  /* or inline-flex */
+  flex-wrap: wrap; }
+
+.item {
+  flex-grow: 1;
+  /* default 0 */ }
 
 
 /*# sourceMappingURL=/ootd.e31bb0bc.css.map */
