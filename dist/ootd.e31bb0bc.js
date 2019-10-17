@@ -32656,23 +32656,59 @@ function (_React$Component) {
   _inherits(App, _React$Component);
 
   function App(props) {
+    var _this;
+
     _classCallCheck(this, App);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(App).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this, props));
+    _this.state = {
+      posts: [{
+        link: 'https://www.instagram.com/p/B3txEARAcSI'
+      }, {
+        link: 'https://www.instagram.com/p/B3o0K1CA5Ld'
+      }, {
+        link: 'https://www.instagram.com/p/B3hh9rsAb0D'
+      }, {
+        link: 'https://www.instagram.com/p/B3e0Yjggasv'
+      }, {
+        link: 'https://www.instagram.com/p/B3cG_MEAPFU'
+      }, {
+        link: 'https://www.instagram.com/p/B3ZEkw6goxS'
+      }, {
+        link: 'https://www.instagram.com/p/B3WqTHbgvPY'
+      }, {
+        link: 'https://www.instagram.com/p/B3T3BKaAXUd'
+      }, {
+        link: 'https://www.instagram.com/p/B3R9hV3ABpm'
+      }, {
+        link: 'https://www.instagram.com/p/B3PBcuoAIfa'
+      }, {
+        link: 'https://www.instagram.com/p/B3MctJzAvnB'
+      }, {
+        link: 'https://www.instagram.com/p/B3J2PQIgf-_'
+      }]
+    };
+    return _this;
   }
 
   _createClass(App, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", null, _react.default.createElement(_reactInstagramEmbed.default, {
-        url: "https://www.instagram.com/p/B3ZDadxnngD/",
+      var _this2 = this;
+
+      return _react.default.createElement("div", null, _react.default.createElement("div", null, this.state.posts.map(function (obj) {
+        return _this2.renderIgPosts(obj.link);
+      })));
+    }
+  }, {
+    key: "renderIgPosts",
+    value: function renderIgPosts(link) {
+      console.log(link);
+      return _react.default.createElement(_reactInstagramEmbed.default, {
+        url: link,
         hideCaption: true,
         containerTagName: "div"
-      }), _react.default.createElement(_reactInstagramEmbed.default, {
-        url: "https://www.instagram.com/p/B3JoGALH0Ja/",
-        hideCaption: true,
-        containerTagName: "div"
-      }));
+      });
     }
   }]);
 
