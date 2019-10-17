@@ -2,5 +2,17 @@
   "dependencies": {
     "react": "^16.10.2",
     "react-dom": "^16.10.2"
+  },
+  "name": "ootd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Bojne/ootd",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html" 
+  },
+  "devDependencies": {
+    "node-sass": "^4.12.0"
   }
 }
