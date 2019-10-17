@@ -1,11 +1,24 @@
 h1 {
-  color: greenyellow; }
+  margin-left: auto;
+  font-family: 'Fascinate Inline', cursive;
+  margin-top: 20x;
+  margin-bottom: 20px; }
+
+a {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+.head {
+  background-image: linear-gradient(to right top, #845ec2, #e65faa, #ff8080, #ffbb61, #f9f871);
+  margin-top: 30px;
+  margin-bottom: 30px; }
 
 .container {
-  border: 5px solid #000;
   display: flex;
   /* or inline-flex */
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-bottom: 10px; }
 
 .item {
   flex-grow: 1;
