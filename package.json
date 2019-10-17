@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+    "react-dom": "^16.10.2",
+    "react-instagram-embed": "^1.5.0"
   },
   "name": "ootd",
   "version": "1.0.0",

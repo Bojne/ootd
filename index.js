@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import './stylesheets/styles.scss';
+import InstagramEmbed from 'react-instagram-embed';
+
 
 
 const destination = document.getElementById("root");
@@ -12,7 +14,15 @@ class App extends React.Component {
       super(props);
     }
     render() {
-      return (<div>Hello World!👑</div>)  
+      return (
+      <div>
+        <InstagramEmbed
+          url='https://www.instagram.com/p/B3ZDadxnngD/'
+          maxWidth={320}
+          hideCaption={true}
+          containerTagName='div'
+        />
+      </div>)  
   }
 }
   
