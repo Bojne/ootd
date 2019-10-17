@@ -22,6 +22,12 @@ class App extends React.Component {
           hideCaption={true}
           containerTagName='div'
         />
+        <InstagramEmbed
+          url='https://www.instagram.com/p/B3rg1S7H6dd/'
+          maxWidth={320}
+          hideCaption={true}
+          containerTagName='div'
+        />
       </div>)  
   }
 }

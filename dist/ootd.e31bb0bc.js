@@ -32669,6 +32669,11 @@ function (_React$Component) {
         maxWidth: 320,
         hideCaption: true,
         containerTagName: "div"
+      }), _react.default.createElement(_reactInstagramEmbed.default, {
+        url: "https://www.instagram.com/p/B3rg1S7H6dd/",
+        maxWidth: 320,
+        hideCaption: true,
+        containerTagName: "div"
       }));
     }
   }]);
