@@ -32616,7 +32616,83 @@ function (_super) {
 
 var _default = InstagramEmbed;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","query-string":"node_modules/query-string/index.js"}],"index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","query-string":"node_modules/query-string/index.js"}],"data/postLink.json":[function(require,module,exports) {
+module.exports = {
+  "post": [{
+    "link": "https://www.instagram.com/p/B31dz6eHYz_"
+  }, {
+    "link": "https://www.instagram.com/p/B31Tt_CHY5d"
+  }, {
+    "link": "https://www.instagram.com/p/B3y63CqHKu3"
+  }, {
+    "link": "https://www.instagram.com/p/B3yph6CH4Ix"
+  }, {
+    "link": "https://www.instagram.com/p/B3wybfCnwzr"
+  }, {
+    "link": "https://www.instagram.com/p/B3wVahyn0hy"
+  }, {
+    "link": "https://www.instagram.com/p/B3uAONDH4OD"
+  }, {
+    "link": "https://www.instagram.com/p/B3t2mYUnACx"
+  }, {
+    "link": "https://www.instagram.com/p/B3tt_iiHG8P"
+  }, {
+    "link": "https://www.instagram.com/p/B3ttlUvnGrN"
+  }, {
+    "link": "https://www.instagram.com/p/B3te14Hng3M"
+  }, {
+    "link": "https://www.instagram.com/p/B3tMLz_nYlo"
+  }, {
+    "link": "https://www.instagram.com/p/B310fJ8nEk6"
+  }, {
+    "link": "https://www.instagram.com/p/B31fMa1H4Qz"
+  }, {
+    "link": "https://www.instagram.com/p/B30yCq3H6Bu"
+  }, {
+    "link": "https://www.instagram.com/p/B3zQPLMHkAa"
+  }, {
+    "link": "https://www.instagram.com/p/B3zBzAanmSH"
+  }, {
+    "link": "https://www.instagram.com/p/B3yOA4fn7CB"
+  }, {
+    "link": "https://www.instagram.com/p/B3ws6RXnXcc"
+  }, {
+    "link": "https://www.instagram.com/p/B3wP3p6ns1R"
+  }, {
+    "link": "https://www.instagram.com/p/B3vlzkGHQUP"
+  }, {
+    "link": "https://www.instagram.com/p/B3uHNpAnMKa"
+  }, {
+    "link": "https://www.instagram.com/p/B3trzHPnUG7"
+  }, {
+    "link": "https://www.instagram.com/p/B3tBJh-HU9A"
+  }, {
+    "link": "https://www.instagram.com/p/B31vS7-AMcz"
+  }, {
+    "link": "https://www.instagram.com/p/B3y8qlfAebf"
+  }, {
+    "link": "https://www.instagram.com/p/B3wQngMgl_4"
+  }, {
+    "link": "https://www.instagram.com/p/B3txEARAcSI"
+  }, {
+    "link": "https://www.instagram.com/p/B3o0K1CA5Ld"
+  }, {
+    "link": "https://www.instagram.com/p/B3hh9rsAb0D"
+  }, {
+    "link": "https://www.instagram.com/p/B3e0Yjggasv"
+  }, {
+    "link": "https://www.instagram.com/p/B3cG_MEAPFU"
+  }, {
+    "link": "https://www.instagram.com/p/B3ZEkw6goxS"
+  }, {
+    "link": "https://www.instagram.com/p/B3WqTHbgvPY"
+  }, {
+    "link": "https://www.instagram.com/p/B3T3BKaAXUd"
+  }, {
+    "link": "https://www.instagram.com/p/B3R9hV3ABp"
+  }]
+};
+},{}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -32626,6 +32702,8 @@ var _reactDom = _interopRequireDefault(require("react-dom"));
 require("./stylesheets/styles.scss");
 
 var _reactInstagramEmbed = _interopRequireDefault(require("react-instagram-embed"));
+
+var _postLink = _interopRequireDefault(require("./data/postLink"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32648,7 +32726,10 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 var destination = document.getElementById("root");
-console.log('Can you see this?');
+
+var postLinks = _postLink.default.post.filter(function (item) {
+  return Math.random() > 0.5;
+});
 
 var App =
 /*#__PURE__*/
@@ -32734,9 +32815,7 @@ function (_React$Component) {
         link: 'https://www.instagram.com/p/B3l99DqHI2C'
       }, {
         link: 'https://www.instagram.com/p/B3lvmTwnU_z'
-      }].filter(function (item) {
-        return Math.random() > 0.5;
-      })
+      }]
     };
     return _this;
   }
@@ -32748,7 +32827,7 @@ function (_React$Component) {
 
       return _react.default.createElement("div", null, _react.default.createElement("div", {
         class: "container"
-      }, this.state.posts.map(function (obj) {
+      }, postLinks.map(function (obj) {
         return _this2.renderIgPosts(obj.link);
       })));
     }
@@ -32770,7 +32849,7 @@ function (_React$Component) {
 }(_react.default.Component);
 
 _reactDom.default.render(_react.default.createElement(App, null), destination);
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./stylesheets/styles.scss":"stylesheets/styles.scss","react-instagram-embed":"node_modules/react-instagram-embed/es/index.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./stylesheets/styles.scss":"stylesheets/styles.scss","react-instagram-embed":"node_modules/react-instagram-embed/es/index.js","./data/postLink":"data/postLink.json"}],"../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -32798,7 +32877,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57042" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52975" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -32974,5 +33053,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+},{}]},{},["../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
 //# sourceMappingURL=/ootd.e31bb0bc.js.map
